@@ -1,0 +1,228 @@
+.components-section {
+	padding-bottom: 48px;
+	margin-bottom: 48px;
+	box-shadow: 0 1px rgba(0,0,0,.1);
+}
+
+.components-variables-section {
+	background-color: hsl(219, 43%, 97%);
+	margin-left: calc(-1 * var(--contentPadding));
+	margin-right: calc(-1 * var(--contentPadding));
+	margin-top: calc(-1 * var(--contentPadding));
+	padding-top: var(--contentPadding);
+	padding-left: var(--contentPadding);
+	padding-right: var(--contentPadding);
+}
+
+@media (max-width: 720px) {
+	.components-variables-section {
+		padding-top: 128px;
+	}
+}
+
+.components-section-title {
+	font-size: var(--fontSize-2);
+	line-height: var(--lineHeight-2);
+	margin-bottom: 32px;
+	font-weight: 700;
+}
+
+.components-section-row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.components-section-col {
+	flex-grow: 1;
+}
+
+.components-section-col:not(:last-child) {
+	margin-right: 32px;
+}
+
+.components-section-spacers-col {
+	flex-grow: 0;
+}
+
+.size-box {
+	width: 32px;
+	height: 16px;
+	margin-bottom: 4px;
+	background-color: #008FE5;
+}
+
+.size-box-section-description {
+	opacity: .6;
+	margin-bottom: 8px;
+}
+
+.size-box-section {
+	margin-bottom: 32px;
+}
+
+.size0 {
+	font-size: var(--fontSize-0);
+	line-height: var(--lineHeight-0);
+}
+
+.size1 {
+	font-size: var(--fontSize-1);
+	line-height: var(--lineHeight-1);
+}
+
+.size2 {
+	font-size: var(--fontSize-2);
+	line-height: var(--lineHeight-2);
+}
+
+.size3 {
+	font-size: var(--fontSize-3);
+	line-height: var(--lineHeight-3);
+}
+
+.font-size {
+	margin-bottom: 8px;
+}
+
+.maxw-sm { max-width: var(--width-sm) }
+.maxw-md { max-width: var(--width-md) }
+.maxw-lg { max-width: var(--width-lg) }
+.maxw-xlg { max-width: var(--width-xlg) }
+
+
+.btn {
+	background-color: #444444;
+	color: white;
+	padding: var(--space-sm) var(--space-md);
+	display: inline-block;
+	appearance: none;
+	-webkit-appearance: none;
+	text-decoration: none;
+	font: inherit;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.input-field {
+	font: inherit;
+	padding: var(--space-sm) var(--space-md);
+	border-radius: 3px;
+	border: 0;
+	box-shadow: inset 0 0 0 1px #ccc;
+	color: inherit;
+	width: 100%;
+}
+
+.input-group-label {
+	margin-bottom: var(--space-sm);
+}
+
+.form-section {
+	margin-bottom: var(--space-md);
+}
+
+.card {
+	padding: var(--space-md) var(--space-lg);
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+
+.card-header {
+	font-size: var(--fontSize-2);
+	line-height: var(--lineHeight-2);
+	margin-bottom: var(--space-md);
+}
+
+.list-item:not(:first-child) {
+	padding-top: var(--space-md);
+}
+
+.list-item:not(:last-child) {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: var(--space-md);
+}
+
+.list-sm .list-item:not(:first-child) {
+	padding-top: var(--space-sm);
+}
+
+.list-sm .list-item:not(:last-child) {
+	padding-bottom: var(--space-sm);
+}
+
+.list-lg .list-item:not(:first-child) {
+	padding-top: var(--space-lg);
+}
+
+.list-lg .list-item:not(:last-child) {
+	padding-bottom: var(--space-lg);
+}
+
+.avatar {
+	display: flex;
+	align-items: center;
+}
+
+.avatar-img {
+	border-radius: 50%;
+	width: calc(var(--u) * 4);
+}
+
+.avatar-letter {
+	border-radius: 50%;
+	width: calc(var(--u) * 4);
+	height: calc(var(--u) * 4);
+	background-color: #ddd;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+.avatar-info {
+	margin-left: var(--space-sm);
+}
+
+.dropdown-trigger {
+	padding: var(--space-sm) var(--space-md);
+	border-radius: 3px;
+	box-shadow: inset 0 0 0 1px #ccc;
+	position: relative;
+	cursor: pointer;
+}
+
+.dropdown.isopen .dropdown-trigger {
+	border-radius: 3px 3px 0 0;
+}
+
+.dropdown-trigger:after {
+	content: '';
+	width: 8px;
+	height: 8px;
+	right: var(--space-md);
+	top: 0;
+	bottom: 6px;
+	margin: auto;
+	display: block;
+	position: absolute;
+	box-shadow: 1px 1px currentColor;
+	transform: rotate(45deg);
+}
+
+.dropdown-menu {
+	display: none;
+	border: 1px solid #ccc;
+	border-width: 0 1px 1px 1px;
+	border-radius: 0 0 3px 3px;
+	padding: var(--space-sm) 0;
+}
+
+.dropdown.isopen .dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu-item {
+	padding: var(--space-sm) var(--space-md);
+	cursor: pointer;
+}

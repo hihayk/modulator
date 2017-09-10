@@ -1,0 +1,464 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="components.css">
+
+  </head>
+  <body>
+    <div class="global-container">
+      <div class="sidebar">
+
+        <h1 class="main-title">modulator</h1>
+
+        <div class="st-section">
+          <div class="st-section-title">
+            Grid
+          </div>
+          <label class="st-row">
+            <div class="st-title">unit</div>
+            <div class="st-content">
+              <input type="number" class="st-input-unit js-st-input-unit var-u" value="8" onkeyup="changeUnit()">
+              <div class="st-input-suffix">px</div>
+            </div>
+          </label>
+        </div>
+        <div class="st-section">
+          <div class="st-section-title">
+            Spaces
+          </div>
+          <label class="st-row">
+            <div class="st-title">sm</div>
+            <div class="st-content">
+              <input id="space-sm" type="number" class="st-input js-st-input" value="1">
+              <div class="st-input-suffix">unit</div>
+            </div>
+          </label>
+          <label class="st-row">
+            <div class="st-title">md</div>
+            <div class="st-content">
+              <input id="space-md" type="number" class="st-input js-st-input" value="2">
+              <div class="st-input-suffix">unit</div>
+            </div>
+          </label>
+          <label class="st-row">
+            <div class="st-title">lg</div>
+            <div class="st-content">
+              <input id="space-lg" type="number" class="st-input js-st-input" value="3">
+              <div class="st-input-suffix">unit</div>
+            </div>
+          </label>
+          <label class="st-row">
+            <div class="st-title">xlg</div>
+            <div class="st-content">
+              <input id="space-xlg" type="number" class="st-input js-st-input" value="8">
+              <div class="st-input-suffix">unit</div>
+            </div>
+          </label>
+        </div>
+        <div class="st-section">
+          <div class="st-section-title">
+            Widths
+          </div>
+          <label class="st-row">
+            <div class="st-title">sm</div>
+            <div class="st-content">
+              <input id="width-sm" type="number" class="st-input js-st-input" value="8">
+              <div class="st-input-suffix">unit</div>
+            </div>
+          </label>
+          <label class="st-row">
+            <div class="st-title">md</div>
+            <div class="st-content">
+              <input id="width-md" type="number" class="st-input js-st-input" value="16">
+              <div class="st-input-suffix">unit</div>
+            </div>
+          </label>
+          <label class="st-row">
+            <div class="st-title">lg</div>
+            <div class="st-content">
+              <input id="width-lg" type="number" class="st-input js-st-input" value="32">
+              <div class="st-input-suffix">unit</div>
+            </div>
+          </label>
+          <label class="st-row">
+            <div class="st-title">xlg</div>
+            <div class="st-content">
+              <input id="width-xlg" type="number" class="st-input js-st-input" value="64">
+              <div class="st-input-suffix">unit</div>
+            </div>
+          </label>
+        </div>
+        <div class="st-section">
+          <div class="st-section-title">
+            Type scale
+          </div>
+          <div class="st-row-group">
+            <div class="st-row-group-title">
+              size 0
+            </div>
+            <label class="st-row">
+              <div class="st-title">font size</div>
+              <div class="st-content">
+                <input id="fontSize-0" type="number" class="st-input js-st-input-font-size" value="14">
+                <div class="st-input-suffix">px</div>
+              </div>
+            </label>
+            <label class="st-row">
+              <div class="st-title">line height</div>
+              <div class="st-content">
+                <input id="lineHeight-0" type="number" class="st-input js-st-input" value="2.5">
+                <div class="st-input-suffix">unit</div>
+              </div>
+            </label>
+          </div>
+          <div class="st-row-group">
+            <div class="st-row-group-title">
+              size 1
+            </div>
+            <label class="st-row">
+              <div class="st-title">font size</div>
+              <div class="st-content">
+                <input id="fontSize-1" type="number" class="st-input js-st-input-font-size" value="18">
+                <div class="st-input-suffix">px</div>
+              </div>
+            </label>
+            <label class="st-row">
+              <div class="st-title">line height</div>
+              <div class="st-content">
+                <input id="lineHeight-1" type="number" class="st-input js-st-input" value="3">
+                <div class="st-input-suffix">unit</div>
+              </div>
+            </label>
+          </div>
+          <div class="st-row-group">
+            <div class="st-row-group-title">
+              size 2
+            </div>
+            <label class="st-row">
+              <div class="st-title">font size</div>
+              <div class="st-content">
+                <input id="fontSize-2" type="number" class="st-input js-st-input-font-size" value="22">
+                <div class="st-input-suffix">px</div>
+              </div>
+            </label>
+            <label class="st-row">
+              <div class="st-title">line height</div>
+              <div class="st-content">
+                <input id="lineHeight-2" type="number" class="st-input js-st-input" value="4">
+                <div class="st-input-suffix">unit</div>
+              </div>
+            </label>
+          </div>
+          <div class="st-row-group">
+            <div class="st-row-group-title">
+              size 3
+            </div>
+            <label class="st-row">
+              <div class="st-title">font size</div>
+              <div class="st-content">
+                <input id="fontSize-3" type="number" class="st-input js-st-input-font-size" value="30">
+                <div class="st-input-suffix">px</div>
+              </div>
+            </label>
+            <label class="st-row">
+              <div class="st-title">line height</div>
+              <div class="st-content">
+                <input id="lineHeight-3" type="number" class="st-input js-st-input" value="5">
+                <div class="st-input-suffix">unit</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+      </div>
+      <div class="sidebar-backdrop" onclick="toggleSidebar()"></div>
+      <div class="main-section">
+
+        <div class="sidebar-toggle" onclick="toggleSidebar()">
+          <span>modulator</span>
+        </div>
+
+        <div class="components-section components-variables-section">
+          
+          <div class="components-section-row">
+            <div class="components-section-col components-section-spacers-col">
+              <div class="size-box-section">
+              <div class="size-box-section-title">unit</div>
+              <div class="size-box-section-description">base unit and grid size</div>
+              
+              <div class="size-box" style="width: var(--u)"></div>
+            </div>
+
+            <div class="size-box-section">
+              <div class="size-box-section-title">spaces</div>
+              <div class="size-box-section-description">base unit and grid size</div>
+              
+              <div class="size-box" style="width: var(--space-sm)"></div>
+              <div class="size-box" style="width: var(--space-md)"></div>
+              <div class="size-box" style="width: var(--space-lg)"></div>
+              <div class="size-box" style="width: var(--space-xlg)"></div>
+            </div>
+
+            <div class="size-box-section">
+              <div class="size-box-section-title">widths</div>
+              <div class="size-box-section-description">base unit and grid size</div>
+
+              <div class="size-box" style="width: var(--width-sm)"></div>
+              <div class="size-box" style="width: var(--width-md)"></div>
+              <div class="size-box" style="width: var(--width-lg)"></div>
+              <div class="size-box" style="width: var(--width-xlg)"></div>
+            </div>
+            </div>
+            <div class="components-section-col">
+              <div class="maxw-xlg">
+                <div class="size-box-section-title">type scale</div>
+                <div class="size-box-section-description">ajust the sizes on the left sidebar</div>
+
+                <div class="size3 font-size" contenteditable spellcheck="false">
+                  <span class="fs"></span> / 
+                  <span class="lh"></span>
+                   – size 3
+                </div>
+                
+                <div class="size2 font-size" contenteditable spellcheck="false">
+                  <span class="fs"></span> / 
+                  <span class="lh"></span>
+                   – size 2
+                </div>
+                
+                <div class="size1 font-size" contenteditable spellcheck="false">
+                  <span class="fs"></span> / 
+                  <span class="lh"></span>
+                   – size 1
+                </div>
+                
+                <div class="size0 font-size" contenteditable spellcheck="false">
+                  <span class="fs"></span> / 
+                  <span class="lh"></span>
+                   – size 0
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="components-section">
+          <div class="components-section-title">Button</div>
+          <button class="btn">button</button>
+        </div>
+
+        <div class="components-section">
+          <div class="components-section-title">Input</div>
+          <div class="maxw-lg">
+            <input class="input-field" type="text" placeholder="input">
+          </div>
+        </div>
+
+        <div class="components-section">
+          <div class="components-section-title">Dropdown</div>
+
+          <div class="components-section-row">
+            <div class="components-section-col maxw-lg">
+              <div class="dropdown isopen">
+                <div class="dropdown-trigger" tabindex="0">dropdown</div>
+                <div class="dropdown-menu">
+                  <div class="dropdown-menu-item">dropdown menu item</div>
+                  <div class="dropdown-menu-item">dropdown menu item</div>
+                  <div class="dropdown-menu-item">dropdown menu item</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="components-section-col maxw-lg">
+              <div class="dropdown">
+                <div class="dropdown-trigger" tabindex="0">dropdown</div>
+                <div class="dropdown-menu">
+                  <div class="dropdown-menu-item">dropdown menu item</div>
+                  <div class="dropdown-menu-item">dropdown menu item</div>
+                  <div class="dropdown-menu-item">dropdown menu item</div>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+
+        <div class="components-section">
+          <div class="components-section-title">Form</div>
+          <div class="form-container maxw-xlg">
+            <div class="form-section">
+              <div class="input-group">
+                <div class="input-group-label">label</div>
+                <input class="input-field" type="text" placeholder="input">
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="input-group">
+                <div class="input-group-label">label</div>
+                <input class="input-field" type="text" placeholder="input">
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="input-group">
+                <div class="input-group-label">label</div>
+                <div class="dropdown">
+                  <div class="dropdown-trigger" tabindex="0">dropdown</div>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-menu-item">dropdown menu item</div>
+                    <div class="dropdown-menu-item">dropdown menu item</div>
+                    <div class="dropdown-menu-item">dropdown menu item</div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+            <div class="form-section">
+              <button class="btn">button</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="components-section">
+          <div class="components-section-title">Card</div>
+          <div class="maxw-xlg">
+            <div class="card">
+              <div class="card-header" contenteditable spellcheck="false">
+                Card title
+              </div>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+            </div>
+          </div>
+        </div>
+
+        <div class="components-section">
+          <div class="components-section-title">List</div>
+          <div class="components-section-row">
+
+          <div class="components-section-col maxw-lg">
+
+            <div class="list list-lg">
+              <div class="list-item">
+                list item
+              </div>
+              <div class="list-item">
+                list item
+              </div>
+              <div class="list-item">
+                list item
+              </div>
+            </div>
+            
+          </div>
+          <div class="components-section-col maxw-lg">
+
+            <div class="list">
+              <div class="list-item">
+                list item
+              </div>
+              <div class="list-item">
+                list item
+              </div>
+              <div class="list-item">
+                list item
+              </div>
+            </div>
+          
+          </div>
+          <div class="components-section-col maxw-lg">
+
+            <div class="list list-sm">
+              <div class="list-item">
+                list item
+              </div>
+              <div class="list-item">
+                list item
+              </div>
+              <div class="list-item">
+                list item
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+
+        <div class="components-section">
+          <div class="components-section-title">Avatar</div>
+          <div class="avatar">
+            <img src="https://i.imgur.com/4ZXRQkH.png" alt="" class="avatar-img">
+            <div class="avatar-info">
+              Sophia Kelley
+            </div>
+          </div>
+          <br>
+          <div class="avatar">
+            <div class="avatar-letter">a</div>
+          </div>
+          <br>
+          <div class="avatar">
+            <div class="avatar-letter">cf</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+
+      const stInputs = [].slice.call(document.querySelectorAll('.js-st-input'));
+
+      stInputs.forEach(input => input.addEventListener('change', handleUpdate));
+      stInputs.forEach(input => input.addEventListener('keyup', handleUpdate));
+
+      function changeUnit() {
+        var currentUnit = document.querySelector('.js-st-input-unit').value;
+        document.documentElement.style.setProperty(`--u`, currentUnit + 'px');
+        updateSizes()
+      }
+
+      function handleUpdate() {
+        var unit = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('--u'));
+        document.documentElement.style.setProperty(`--${this.id}`, 'calc(' + this.value + ' * var(--u))');
+      }
+
+      function updateSizes() {
+        document.querySelector('.size0 .fs').innerHTML = window.getComputedStyle(document.querySelector('.size0')).getPropertyValue('font-size')
+        document.querySelector('.size0 .lh').innerHTML = window.getComputedStyle(document.querySelector('.size0')).getPropertyValue('line-height')
+        document.querySelector('.size1 .fs').innerHTML = window.getComputedStyle(document.querySelector('.size1')).getPropertyValue('font-size')
+        document.querySelector('.size1 .lh').innerHTML = window.getComputedStyle(document.querySelector('.size1')).getPropertyValue('line-height')
+        document.querySelector('.size2 .fs').innerHTML = window.getComputedStyle(document.querySelector('.size2')).getPropertyValue('font-size')
+        document.querySelector('.size2 .lh').innerHTML = window.getComputedStyle(document.querySelector('.size2')).getPropertyValue('line-height')
+        document.querySelector('.size3 .fs').innerHTML = window.getComputedStyle(document.querySelector('.size3')).getPropertyValue('font-size')
+        document.querySelector('.size3 .lh').innerHTML = window.getComputedStyle(document.querySelector('.size3')).getPropertyValue('line-height')
+      }
+
+      updateSizes()
+
+      const stFontSizeInputs = [].slice.call(document.querySelectorAll('.js-st-input-font-size'));
+      stFontSizeInputs.forEach(input => input.addEventListener('change', handleUpdateFontSize));
+      stFontSizeInputs.forEach(input => input.addEventListener('keyup', handleUpdateFontSize));
+
+      function handleUpdateFontSize() {
+        document.documentElement.style.setProperty(`--${this.id}`, this.value + 'px');
+      }
+
+      function toggleSidebar() {
+        document.querySelector('.sidebar').classList.toggle('isopen')
+      }
+
+      function wrap(el, wrapper) {
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+      }
+
+    </script>
+  </body>
+</html>
