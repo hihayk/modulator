@@ -433,6 +433,7 @@
       function handleUpdate() {
         var unit = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('--u'));
         document.documentElement.style.setProperty(`--${this.id}`, 'calc(' + this.value + ' * var(--u))');
+        updateSizes()
       }
 
       function updateSizes() {
@@ -454,15 +455,11 @@
 
       function handleUpdateFontSize() {
         document.documentElement.style.setProperty(`--${this.id}`, this.value + 'px');
+        updateSizes()
       }
 
       function toggleSidebar() {
         document.querySelector('.sidebar').classList.toggle('isopen')
-      }
-
-      function wrap(el, wrapper) {
-        el.parentNode.insertBefore(wrapper, el);
-        wrapper.appendChild(el);
       }
 
     </script>
