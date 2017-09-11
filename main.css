@@ -29,7 +29,6 @@ img {
 	border-right: 1px solid #D8D8D8;
 	overflow: auto;
 	flex-shrink: 0;
-	padding-bottom: 128px;
 	transition: .2s;
 }
 
@@ -203,4 +202,14 @@ img {
 .st-input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+.author-section {
+	padding: 96px 24px 24px 24px;
+}
+
+.link {
+	text-decoration: none;
+	color: inherit;
+	border-bottom: 1px solid;
 }
