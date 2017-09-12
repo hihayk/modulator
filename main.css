@@ -173,6 +173,7 @@ img {
 	text-align: center;
 	margin-right: 8px;
 	background-color: transparent;
+	-moz-appearance: textfield;
 }
 
 .st-input::-moz-selection,
