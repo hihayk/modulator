@@ -1,3 +1,3 @@
 # modulator
 
-![](https://i.imgur.com/d0NjmvP.png)
+![](https://i.imgur.com/KG8uHPD.png)
